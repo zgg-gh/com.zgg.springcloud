@@ -1,0 +1,4 @@
+# Project exclude paths
+/cloud-api-common/target/
+/cloud-consumer-order-80/target/
+/cloud-payment-8001/target/
