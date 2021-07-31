@@ -21,6 +21,17 @@ spring:
 #  sleuth:
 #    sampler:
 #      probability: 1 # 采样率在0~1之间，1表示全部采样
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
+  instance:
+    instance-id: payment8001
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 300000 #发送心跳时间
+    lease-expiration-duration-in-seconds: 900000 #最后异常发送心跳的时间
 
 mybatis:
   mapperLocations: classpath:mapper/*.xml
