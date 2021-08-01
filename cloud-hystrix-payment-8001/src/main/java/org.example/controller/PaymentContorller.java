@@ -57,4 +57,9 @@ public class PaymentContorller {
         return paymentService.getPaymentId_TimeOut(id);
     }
 
+    @GetMapping(value = "/payment/Circuit/timeout/{id}")
+    public String getPaymentHystrixCircuit(@PathVariable("id") Integer id){
+        return paymentService.getPaymentIdHystrixCircuit(id);
+    }
+
 }
