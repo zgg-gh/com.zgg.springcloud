@@ -19,6 +19,7 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 public class PaymentContorller {
 
+
     @Resource
     private paymentHystrixService paymentService;
 
@@ -41,6 +42,7 @@ public class PaymentContorller {
 
             log.info(instance.getInstanceId()+"\t"+instance.getHost()+"\t"+instance.getUri()+"\t");
         }
+
         return discoveryClient;
 
     }
